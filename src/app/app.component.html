@@ -1,3 +1,6 @@
 <div><app-test1 [(libelle1)]="libelle"></app-test1></div>
 <div><app-test2 [(libelle2)]="libelle"></app-test2></div>
 <div>{{libelle}}</div>
+<hr>
+<div><app-test1 #test1></app-test1></div>
+<div><input type="text" [(ngModel)]="test1._libelle1"></div>
