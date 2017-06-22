@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormControl } from "@angular/forms";
 
 @Component({
@@ -17,7 +17,11 @@ export class Test2Component implements OnInit {
 
   set libelle2(value: string) {
     this._libelle2 = value;
+    this.libelle2Change.emit(value);
   }
+
+  @Output()
+  libelle2Change : EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
