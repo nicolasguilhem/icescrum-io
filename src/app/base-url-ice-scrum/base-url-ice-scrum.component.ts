@@ -1,8 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from "@angular/forms";
 
-import { settings } from "../app.settings";
-
 @Component({
   selector: 'app-base-url-ice-scrum',
   templateUrl: './base-url-ice-scrum.component.html',

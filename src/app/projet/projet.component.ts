@@ -1,8 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from "@angular/forms";
 
-import { settings } from "../app.settings";
-
 @Component({
   selector: 'app-projet',
   templateUrl: './projet.component.html',
@@ -25,7 +23,7 @@ export class ProjetComponent implements OnInit {
     this.codeProjetChange.emit(value);
   }
 
-  constructor(private settings: settings) { }
+  constructor() { }
 
   ngOnInit() {
   }

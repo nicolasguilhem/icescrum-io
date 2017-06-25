@@ -36,17 +36,6 @@ export class PageConfigComponent implements OnInit {
   lstConfigProperty: QueryList<ConfigPropertyDirective>;
 
   sauvegarderConfig() {
-    this.lstConfigProperty.map((conf) => this.enregistrerConf(conf));
-  }
-
-  enregistrerConf (conf: ConfigPropertyDirective) {
-
-    if (conf.appConfigProperty == 'projetActif') {
-      this.settings.projetActif = conf.appConfigValue;
-    }
-
-    if (conf.appConfigProperty == 'baseUrlIceScrum') {
-      this.settings.baseUrlIceScrum = conf.appConfigValue;
-    }
+    this.lstConfigProperty.map((conf) => conf.sauvegarderConfig());
   }
 }

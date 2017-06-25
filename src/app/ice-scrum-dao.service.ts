@@ -9,6 +9,6 @@ export class IceScrumDAOService {
   constructor(private http: Http, private settings: settings) { }
 
   getBaseUri():string {
-    return this.settings.BaseUrlIceScrum;
+    return this.settings.baseUrlIceScrum;
   }
 }
