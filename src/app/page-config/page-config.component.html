@@ -1,3 +1,6 @@
 <h1>Configuration</h1>
 <app-projet appConfigProperty='projetActif' appConfigValue='{{codeProjet}}' [(codeProjet)]="codeProjet"></app-projet>
+<hr>
+<app-base-url-ice-scrum appConfigProperty='baseUrlIceScrum' appConfigValue='{{urlRest}}' [(urlRest)]="urlRest"></app-base-url-ice-scrum>
+<hr>
 <button type="button" (click)="sauvegarderConfig()">Sauvegarder</button>

@@ -13,15 +13,23 @@ export class PageConfigComponent implements OnInit {
 
   ngOnInit() {
     this._codeProjet = this.settings.projetActif;
+    this._urlRest = this.settings.baseUrlIceScrum;
   }
 
   _codeProjet: string;
   get codeProjet():string {
     return this._codeProjet;
   }
-
   set codeProjet(value: string) {
     this._codeProjet = value;
+  }
+
+  _urlRest: string;
+  get urlRest():string {
+    return this._urlRest;
+  }
+  set urlRest(value: string) {
+    this._urlRest = value;
   }
 
   @ViewChildren(ConfigPropertyDirective)
@@ -35,6 +43,10 @@ export class PageConfigComponent implements OnInit {
 
     if (conf.appConfigProperty == 'projetActif') {
       this.settings.projetActif = conf.appConfigValue;
+    }
+
+    if (conf.appConfigProperty == 'baseUrlIceScrum') {
+      this.settings.baseUrlIceScrum = conf.appConfigValue;
     }
   }
 }

@@ -14,6 +14,7 @@ import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { PageConfigComponent } from './page-config/page-config.component';
 import { PageServicesComponent } from './page-services/page-services.component';
 import { ConfigPropertyDirective } from './config-property.directive';
+import { BaseUrlIceScrumComponent } from './base-url-ice-scrum/base-url-ice-scrum.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ConfigPropertyDirective } from './config-property.directive';
     PageAccueilComponent,
     PageConfigComponent,
     PageServicesComponent,
-    ConfigPropertyDirective
+    ConfigPropertyDirective,
+    BaseUrlIceScrumComponent
   ],
   imports: [
     BrowserModule,
