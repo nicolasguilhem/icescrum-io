@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdSidenavModule, MdButtonModule, MdIconModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { IceScrumDAOService } from "app/ice-scrum-dao.service";
@@ -35,6 +38,8 @@ import { PasswdIceScrumComponent } from './passwd-ice-scrum/passwd-ice-scrum.com
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
+    MdSidenavModule, MdButtonModule, FlexLayoutModule, MdIconModule,
     RouterModule.forRoot(AppRoutes)
   ],
   providers: [
