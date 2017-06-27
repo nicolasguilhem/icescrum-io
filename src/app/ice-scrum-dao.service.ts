@@ -11,4 +11,11 @@ export class IceScrumDAOService {
   getBaseUri():string {
     return this.settings.baseUrlIceScrum;
   }
+
+  testConnexion() {
+    let headers = new Headers();
+    headers.append("Authorization","Basic "+btoa(this.settings.loginIceScrum+":"+this.settings.passwdIceScrum));
+    this.http.get(this.settings.baseUrlIceScrum+'/release', headers)
+    .subscribe((reponse) => console.log(reponse.json()));
+  }
 }

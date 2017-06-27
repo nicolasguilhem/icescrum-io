@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class settings {
-    private _baseUrlIceScrum: string = 'https://www.icescrum.com/a/ws/p/GDA/';
+    private _baseUrlIceScrum: string = '';
     get baseUrlIceScrum(): string {
         return this._baseUrlIceScrum;
     }
@@ -10,7 +10,23 @@ export class settings {
         this._baseUrlIceScrum = value;
     }
 
-    private _projetActif: string = 'GDA';
+    private _loginIceScrum: string = '';
+    get loginIceScrum(): string {
+        return this._loginIceScrum;
+    }
+    set loginIceScrum(value:string) {
+        this._loginIceScrum = value;
+    }
+
+    private _passwdIceScrum: string = '';
+    get passwdIceScrum(): string {
+        return this._passwdIceScrum;
+    }
+    set passwdIceScrum(value:string) {
+        this._passwdIceScrum = value;
+    }
+
+    private _projetActif: string = '';
     get projetActif(): string {
         return this._projetActif;
     }
