@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from "@angular/router";
 
 import { AppRoutes } from "app/app-routes";
 import { settings } from "app/app.settings";
+import { MdSidenav } from "@angular/material";
 
 @Component({
   selector: 'app-menu',
@@ -10,6 +11,9 @@ import { settings } from "app/app.settings";
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
+  @Input()
+  sidenav: MdSidenav;
 
   constructor(private router: Router,
               private settings: settings) { }
@@ -24,5 +28,7 @@ export class MenuComponent implements OnInit {
     } else  {
       this.router.navigate([""]);
     }
+
+    this.sidenav.close();
   }
 }

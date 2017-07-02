@@ -1,7 +1,7 @@
 <md-sidenav-container>
     <md-sidenav #sidenav>
-        <app-menu></app-menu>
+        <app-menu fxLayout="column" [sidenav]="sidenav"></app-menu>
     </md-sidenav>
-    <button md-raised-button type="button" (click)="sidenav.open()"><md-icon>menu</md-icon></button>
+    <button md-raised-button type="button" (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
     <router-outlet></router-outlet>
 </md-sidenav-container>
