@@ -4,7 +4,7 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdSidenavModule, MdButtonModule, MdIconModule } from '@angular/material';
+import { MdSidenavModule, MdButtonModule, MdIconModule, MdToolbarModule, MdCardModule, MdInputModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
@@ -39,7 +39,7 @@ import { PasswdIceScrumComponent } from './passwd-ice-scrum/passwd-ice-scrum.com
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdSidenavModule, MdButtonModule, FlexLayoutModule, MdIconModule,
+    MdSidenavModule, MdButtonModule, FlexLayoutModule, MdIconModule, MdToolbarModule, MdCardModule, MdInputModule,
     RouterModule.forRoot(AppRoutes)
   ],
   providers: [

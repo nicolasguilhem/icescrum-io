@@ -23,6 +23,10 @@ export class BaseUrlIceScrumComponent implements OnInit {
     this.urlRestChange.emit(value);
   }
 
+  testUrl() {
+    console.log("test de l'url");
+  }
+
   constructor() { }
 
   ngOnInit() {

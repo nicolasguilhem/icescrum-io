@@ -1,2 +1,4 @@
-<label for="urlRest">Url REST ice-scrum : </label>
-<input type="text" id="urlRest" [(ngModel)]="urlRest">
+<md-input-container>
+<input mdInput placeholder="Url REST ice-scrum" type="text" [(ngModel)]="urlRest">
+</md-input-container>
+<button md-mini-fab (click)="testUrl()"><md-icon>check circle</md-icon></button>

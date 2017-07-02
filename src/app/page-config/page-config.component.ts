@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { settings } from "app/app.settings";
 import { ConfigPropertyDirective } from "app/config-property.directive";
-import { IceScrumDAOService } from "app/ice-scrum-dao.service";
 
 @Component({
   selector: 'app-page-config',
@@ -10,8 +9,7 @@ import { IceScrumDAOService } from "app/ice-scrum-dao.service";
 })
 export class PageConfigComponent implements OnInit {
 
-  constructor(private settings: settings,
-              private iceScrumDAOService: IceScrumDAOService) { }
+  constructor(private settings: settings) { }
 
   ngOnInit() {
     this._codeProjet = this.settings.projetActif;
@@ -55,9 +53,5 @@ export class PageConfigComponent implements OnInit {
 
   sauvegarderConfig() {
     this.lstConfigProperty.map((conf) => conf.sauvegarderConfig());
-  }
-
-  testConnxion() {
-    this.iceScrumDAOService.testConnexion();
   }
 }

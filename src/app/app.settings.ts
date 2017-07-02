@@ -33,4 +33,19 @@ export class settings {
     set projetActif(value:string) {
         this._projetActif = value;
     }
+
+    public afficherContexte():string {
+
+        let contexte:string = "";
+
+        if (this._projetActif) {
+            contexte += this._projetActif;
+        }
+
+        if (this._baseUrlIceScrum) {
+            contexte += ` (${this._baseUrlIceScrum})`;
+        }
+
+        return contexte;
+    }
 }

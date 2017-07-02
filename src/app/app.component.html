@@ -2,6 +2,14 @@
     <md-sidenav #sidenav>
         <app-menu fxLayout="column" [sidenav]="sidenav"></app-menu>
     </md-sidenav>
-    <button md-raised-button type="button" (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
-    <router-outlet></router-outlet>
+    
+    <md-toolbar color="primary">
+        <button md-button type="button" (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
+        <span fxFlex>IceScrum Toolbox</span>
+        <span>{{settings.afficherContexte()}}</span>
+    </md-toolbar>
+    
+    <div class="app-content">
+        <router-outlet></router-outlet>
+    </div>
 </md-sidenav-container>

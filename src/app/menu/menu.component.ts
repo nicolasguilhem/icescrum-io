@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from "@angular/router";
 
 import { AppRoutes } from "app/app-routes";
-import { settings } from "app/app.settings";
 import { MdSidenav } from "@angular/material";
 
 @Component({
@@ -15,8 +14,7 @@ export class MenuComponent implements OnInit {
   @Input()
   sidenav: MdSidenav;
 
-  constructor(private router: Router,
-              private settings: settings) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
