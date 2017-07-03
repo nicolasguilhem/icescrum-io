@@ -1,3 +1,4 @@
 <md-input-container>
-    <input mdInput placeholder="Code projet" type="text" [(ngModel)]="codeProjet">
+    <input #projet mdInput placeholder="Code projet" type="text" [(ngModel)]="codeProjet" required>
+    <md-error>Champs obligatoire</md-error>
 </md-input-container>

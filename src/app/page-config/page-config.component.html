@@ -1,9 +1,11 @@
-<md-card fxLayout="column">
-    <app-projet appConfigProperty='projetActif' appConfigValue='{{codeProjet}}' [(codeProjet)]="codeProjet"></app-projet>
-    <app-base-url-ice-scrum appConfigProperty='baseUrlIceScrum' appConfigValue='{{urlRest}}' [(urlRest)]="urlRest"></app-base-url-ice-scrum>
-    <app-login-ice-scrum appConfigProperty='loginIceScrum' appConfigValue='{{loginIceScrum}}' [(loginIceScrum)]="loginIceScrum"></app-login-ice-scrum>
-    <app-passwd-ice-scrum appConfigProperty='passwdIceScrum' appConfigValue='{{passwdIceScrum}}' [(passwdIceScrum)]="passwdIceScrum"></app-passwd-ice-scrum>
-</md-card>
-<span class="app-action">
-  <button md-fab (click)="sauvegarderConfig()"><md-icon>check circle</md-icon></button>
-</span>
+<form #formulaire="ngForm" (ngSubmit)="sauvegarderConfig(formulaire)">
+  <md-card fxLayout="column">
+      <app-projet appConfigProperty='projetActif' appConfigValue='{{codeProjet}}' [(codeProjet)]="codeProjet"></app-projet>
+      <app-base-url-ice-scrum appConfigProperty='baseUrlIceScrum' appConfigValue='{{urlRest}}' [(urlRest)]="urlRest"></app-base-url-ice-scrum>
+      <app-login-ice-scrum appConfigProperty='loginIceScrum' appConfigValue='{{loginIceScrum}}' [(loginIceScrum)]="loginIceScrum"></app-login-ice-scrum>
+      <app-passwd-ice-scrum appConfigProperty='passwdIceScrum' appConfigValue='{{passwdIceScrum}}' [(passwdIceScrum)]="passwdIceScrum"></app-passwd-ice-scrum>
+  </md-card>
+  <span class="app-action">
+    <button md-fab type="submit"><md-icon>check circle</md-icon></button>
+  </span>
+</form>

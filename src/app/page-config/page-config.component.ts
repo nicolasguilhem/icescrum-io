@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { settings } from "app/app.settings";
 import { ConfigPropertyDirective } from "app/config-property.directive";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'app-page-config',
@@ -51,7 +52,10 @@ export class PageConfigComponent implements OnInit {
   @ViewChildren(ConfigPropertyDirective)
   lstConfigProperty: QueryList<ConfigPropertyDirective>;
 
-  sauvegarderConfig() {
-    this.lstConfigProperty.map((conf) => conf.sauvegarderConfig());
+  sauvegarderConfig(form: NgForm) {
+    console.log(form.form.valid);
+    if (form.form.valid) {
+      this.lstConfigProperty.map((conf) => conf.sauvegarderConfig());
+    }
   }
 }
